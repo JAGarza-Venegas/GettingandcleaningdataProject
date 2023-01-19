@@ -76,5 +76,6 @@ MeltAvgData <- melt(AvgData, id = names(AvgData[c(1,68)]), measure.vars = names(
 TidyAvgData <- dcast(MeltAvgData, variable ~ Activity, mean)
 
 write.csv(TidyAvgData, file = ".\\TidyDataset.csv")
+write.table(TidyAvgData, file = ".\\TidyDataset.txt", row.name = FALSE)
 
 ### This completes the task marked as 5 in Coursera Assignment. ###
